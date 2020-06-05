@@ -3,6 +3,7 @@
 from . import fileparse
 from . import stock
 
+
 class Portfolio:
     def __init__(self):
         self._holdings = []
@@ -10,9 +11,9 @@ class Portfolio:
     @classmethod
     def from_csv(cls, lines, **opts):
         self = cls()
-        portdicts = fileparse.parse_csv(lines, 
-                                        select=['name','shares','price'], 
-                                        types=[str,int,float],
+        portdicts = fileparse.parse_csv(lines,
+                                        select=['name', 'shares', 'price'],
+                                        types=[str, int, float],
                                         **opts)
 
         for d in portdicts:
@@ -45,7 +46,3 @@ class Portfolio:
         for s in self._holdings:
             total_shares[s.name] += s.shares
         return total_shares
-
-
-
-        

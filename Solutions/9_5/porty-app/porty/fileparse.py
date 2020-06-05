@@ -3,6 +3,7 @@ import csv
 import logging
 log = logging.getLogger(__name__)
 
+
 def parse_csv(lines, select=None, types=None, has_headers=True, delimiter=',', silence_errors=False):
     '''
     Parse a CSV file into a list of records with type conversion.

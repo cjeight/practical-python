@@ -1,5 +1,6 @@
 # typedproperty.py
 
+
 def typedproperty(name, expected_type):
     private_name = '_' + name
     @property
